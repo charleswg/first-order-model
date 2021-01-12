@@ -30,6 +30,12 @@ There are several configuration (```config/dataset_name.yaml```) files one for e
 Checkpoints can be found under following link: [google-drive](https://drive.google.com/open?id=1PyQJmkdCsAkOYwUyaj_l-l0as-iLDgeH) or [yandex-disk](https://yadi.sk/d/lEw8uRm140L_eQ).
 
 ### Animation Demo
+To prepare the input data, run the following command:
+```
+python crop-video.py --inp source_image.jpg --input_type image --min_frames 0
+python crop-video.py --inp driving_video.mp4 --input_type video --min_frames 0
+```
+
 To run a demo, download checkpoint and run the following command:
 ```
 python demo.py  --config config/dataset_name.yaml --driving_video path/to/driving --source_image path/to/source --checkpoint path/to/checkpoint --relative --adapt_scale
